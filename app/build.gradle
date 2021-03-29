@@ -21,8 +21,8 @@ android {
         main {
             res.srcDirs =
                     [
-                            file("src/main/res/layouts/fragment/pantallaPrincipal").listFiles(),
                             file("src/main/res/layouts/fragment").listFiles(),
+                            file("src/main/res/layouts/fragment/pantallaPrincipal").listFiles(),
                             file("src/main/res/layouts/").listFiles(),
                             'src/main/res/layouts/fragment',
                             'src/main/res/layouts',

@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">CheckingHomeworks</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_groups">Grupos</string>
+    <string name="nav_charts">Gráficos</string>
+    <string name="nav_config">Configuración</string>
+
+    <string name="tab_stock">Almacenamiento</string>
+    <string name="tab_shoppingList">Lista de compras</string>
+
+    <string name="to_do_List">Recordatorios</string>
+    <string name="add">Agregar</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Eliminar</string>
+
+    <string name="tab_historyChart">Gráfico historial</string>
+    <string name="tab_expenses">Consumo</string>
+
+    <string name="mode_day">Claro</string>
+    <string name="mode_night">Oscuro</string>
+
+    <string name="profile">Mi perfil</string>
+    <string name="report_bug">Informar bug</string>
+    <string name="donate">¿Como donar?</string>
+    <string name="clean_data">Liberar datos almacenados</string>
+    <string name="adminGroup">Grupos administrados</string>
+
+    <string name="select">Seleccione</string>
+    <string name="date">Fecha: </string>
+    <string name="expiration">Vencimiento: </string>
+
+    <string name="out_of_stock">Tiene algún item sin stock</string>
+    <string name="next_expiration">Tiene un item proximoa vencerse</string>
+
+    <string name="updated">Sin cambios</string>
+    <string name="incomingUpdate">Actualización pendiente</string>
+
+    <string name="total_cost">Costo total</string>
+
 </resources>
