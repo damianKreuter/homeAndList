@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="detalle">#F8DD99</color>
+    <color name="fondo">#FFF8E7</color>
+    <color name="fondoCardView">#FFAF25</color>
+    <color name="selecionado">#EC1010</color>
+    <color name="botonesYTab">#B80707</color>
+
+    <color name="detalleNight">#BDBDBD</color>
+    <color name="fondoNight">#272727</color>
+    <color name="fondoCardViewNight">#353535</color>
+    <color name="selecionadoNight">#EC1010</color>
+    <color name="botonesYTabNight">#B80707</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

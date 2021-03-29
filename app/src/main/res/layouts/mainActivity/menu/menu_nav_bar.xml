@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mimenu">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/menu_personalData"
+        android:icon="@drawable/ic_pefil_y_grupos"
+        android:title="Perfil" />
+
+    <item
+        android:enabled="false"
+        android:title="@null" />
+
+    <item
+        android:id="@+id/menu_verGraficos"
+        android:icon="@drawable/ic_grafico_basico"
+        android:title="Gráfico" />
+
+    <item
+        android:id="@+id/menu_configuracion"
+        android:icon="@drawable/ic_options"
+        android:title="Ajuste" />
+</menu>

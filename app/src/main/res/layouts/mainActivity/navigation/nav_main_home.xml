@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.coshcorp.checkinghomeworks.mainapp.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_chartsFragment"
+            app:destination="@id/chartsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileAndGroupsFragment"
+            app:destination="@id/profileAndGroupsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_configurationFragment"
+            app:destination="@id/configurationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chartsFragment"
+        android:name="com.coshcorp.checkinghomeworks.mainapp.fragment.ChartsFragment"
+        android:label="fragment_charts"
+        tools:layout="@layout/fragment_charts" >
+        <action
+            android:id="@+id/action_chartsFragment_to_profileAndGroupsFragment"
+            app:destination="@id/profileAndGroupsFragment" />
+        <action
+            android:id="@+id/action_chartsFragment_to_configurationFragment"
+            app:destination="@id/configurationFragment" />
+        <action
+            android:id="@+id/action_chartsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/configurationFragment"
+        android:name="com.coshcorp.checkinghomeworks.mainapp.fragment.ConfigurationFragment"
+        android:label="fragment_configuration"
+        tools:layout="@layout/fragment_configuration" >
+        <action
+            android:id="@+id/action_configurationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileAndGroupsFragment"
+        android:name="com.coshcorp.checkinghomeworks.mainapp.fragment.ProfileAndGroupsFragment"
+        android:label="profile_and_groups_fragment"
+        tools:layout="@layout/profile_and_groups_fragment" >
+        <action
+            android:id="@+id/action_profileAndGroupsFragment_to_configurationFragment"
+            app:destination="@id/configurationFragment" />
+        <action
+            android:id="@+id/action_profileAndGroupsFragment_to_chartsFragment"
+            app:destination="@id/chartsFragment" />
+        <action
+            android:id="@+id/action_profileAndGroupsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
