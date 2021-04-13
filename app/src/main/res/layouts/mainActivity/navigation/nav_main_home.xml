@@ -11,52 +11,24 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_chartsFragment"
-            app:destination="@id/chartsFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_profileAndGroupsFragment"
-            app:destination="@id/profileAndGroupsFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_configurationFragment"
-            app:destination="@id/configurationFragment" />
+            android:id="@+id/action_homeFragment_to_crearElementoFragment"
+            app:destination="@id/crearElementoFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
     </fragment>
     <fragment
-        android:id="@+id/chartsFragment"
-        android:name="com.coshcorp.checkinghomeworks.mainapp.fragment.ChartsFragment"
-        android:label="fragment_charts"
-        tools:layout="@layout/fragment_charts" >
+        android:id="@+id/crearElementoFragment"
+        android:name="com.coshcorp.checkinghomeworks.crearElementoFragment"
+        android:label="fragment_crear_elemento"
+        tools:layout="@layout/fragment_crear_elemento" >
         <action
-            android:id="@+id/action_chartsFragment_to_profileAndGroupsFragment"
-            app:destination="@id/profileAndGroupsFragment" />
-        <action
-            android:id="@+id/action_chartsFragment_to_configurationFragment"
-            app:destination="@id/configurationFragment" />
-        <action
-            android:id="@+id/action_chartsFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/configurationFragment"
-        android:name="com.coshcorp.checkinghomeworks.mainapp.fragment.ConfigurationFragment"
-        android:label="fragment_configuration"
-        tools:layout="@layout/fragment_configuration" >
-        <action
-            android:id="@+id/action_configurationFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/profileAndGroupsFragment"
-        android:name="com.coshcorp.checkinghomeworks.mainapp.fragment.ProfileAndGroupsFragment"
-        android:label="profile_and_groups_fragment"
-        tools:layout="@layout/profile_and_groups_fragment" >
-        <action
-            android:id="@+id/action_profileAndGroupsFragment_to_configurationFragment"
-            app:destination="@id/configurationFragment" />
-        <action
-            android:id="@+id/action_profileAndGroupsFragment_to_chartsFragment"
-            app:destination="@id/chartsFragment" />
-        <action
-            android:id="@+id/action_profileAndGroupsFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_crearElementoFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 </navigation>

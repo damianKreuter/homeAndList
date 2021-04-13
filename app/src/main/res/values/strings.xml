@@ -38,4 +38,7 @@
 
     <string name="total_cost">Costo total</string>
 
+    <string name="select_type">Seleccionar tipo</string>
+    <string name="titulo">Titulo</string>
+    <string name="description">Descripción</string>
 </resources>

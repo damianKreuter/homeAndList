@@ -24,11 +24,14 @@ android {
                             file("src/main/res/layouts/fragment").listFiles(),
                             file("src/main/res/layouts/fragment/pantallaPrincipal").listFiles(),
                             file("src/main/res/layouts/").listFiles(),
-                            'src/main/res/layouts/fragment',
                             'src/main/res/layouts',
                             'src/main/res'
                     ]
         }
+    }
+
+    packagingOptions {
+        exclude "META-INF/DEPENDENCIES"
     }
 
     buildscript {
