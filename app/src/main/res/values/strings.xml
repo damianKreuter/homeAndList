@@ -41,4 +41,16 @@
     <string name="select_type">Seleccionar tipo</string>
     <string name="titulo">Titulo</string>
     <string name="description">Descripción</string>
+
+    <string name="requerido">*Requerido</string>
+    <string name="opcional">Opcional</string>
+    <string name="esrequerido">Este campo es requerido</string>
+    <string name="completarrequeridos">Complete los campos requeridos</string>
+
+    <string name="stockstatus">stock</string>
+    <string name="liststatus">listas</string>
+    <string name="finanzastatus">finanzas</string>
+    <string name="grupostatus">grupos</string>
+    <string name="notastatus">notas</string>
+    <string name="itemsstatus">itemComprado</string>
 </resources>

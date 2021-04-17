@@ -1,5 +1,5 @@
 package com.coshcorp.checkinghomeworks.mainapp.entities.enumType
 
 enum class ImageTipoItem {
-    VERDURA, CARNE, POLLO, PESCADO, LACTEOS, FRUTAS, BEBIDAS, ALCOHOL
+    Verdura, Carne, Pollo, Pescado, Lacteo, Fruta, Bebiba, Alcohol
 }

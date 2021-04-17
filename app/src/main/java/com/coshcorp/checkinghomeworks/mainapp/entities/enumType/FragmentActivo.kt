@@ -5,5 +5,6 @@ enum class FragmentActivo {
     listas,
     notas,
     finanzas,
-    itemComprado
+    itemComprado,
+    grupos
 }

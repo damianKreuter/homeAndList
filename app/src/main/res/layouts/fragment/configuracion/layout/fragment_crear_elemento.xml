@@ -1,48 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".crearElementoFragment">
+    tools:context=".mainapp.fragment.crearElemento.crearElementoFragment">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="15dp">
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></com.google.android.material.appbar.AppBarLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_titulo"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/detalle"
             android:hint="@string/titulo"
-
-            android:background="@color/fondoCardView"
             android:textColorHint="@color/selecionado"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp"
+
+            app:errorEnabled="true"
+            app:helperText="@string/requerido"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editLayout_input_layout_descripcionPedidoNuevo"
+                android:id="@+id/editlayout_title"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></com.google.android.material.textfield.TextInputEditText>
+                android:layout_height="wrap_content"
+                android:maxLines="2"></com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/combobox_tipo_pedido"
+            android:id="@+id/combobox_type"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
-            android:background="@color/fondoCardView"
+            android:layout_marginEnd="8dp"
             android:hint="@string/select_type"
             android:textColorHint="@color/selecionado"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp"
+            app:helperText="@string/requerido"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_titulo">
@@ -59,23 +81,40 @@
             android:id="@+id/input_descripcion"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
-            android:background="@color/fondoCardView"
-
+            android:layout_marginEnd="8dp"
             android:hint="@string/description"
             android:textColorHint="@color/selecionado"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp"
+            app:helperText="@string/opcional"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/combobox_tipo_pedido">
+            app:layout_constraintTop_toBottomOf="@+id/combobox_type">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_layout_descripcion"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></com.google.android.material.textfield.TextInputEditText>
+                android:layout_height="wrap_content"
+                android:maxLines="4"></com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_button_creation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/selecionado"
+            android:src="@drawable/ic_baseline_add_circle_outline_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@android:color/white" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
