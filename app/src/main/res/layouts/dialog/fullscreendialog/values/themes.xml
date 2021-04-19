@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="Theme.CheckingHomeworks.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.CheckingHomeworks.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.CheckingHomeworks.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

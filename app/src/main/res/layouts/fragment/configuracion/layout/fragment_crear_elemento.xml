@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainapp.fragment.crearElemento.crearElementoFragment">
+    tools:context=".mainapp.fragment.crearElemento.crearElementoFragment"
+    android:background="@color/fondo">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,35 +14,45 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appBarLayout"
+            android:id="@+id/appBarLayout2"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="false"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></com.google.android.material.appbar.AppBarLayout>
+            app:layout_constraintTop_toTopOf="parent">
 
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                app:layout_scrollFlags="scroll|enterAlways"/>
+        </com.google.android.material.appbar.AppBarLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_titulo"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/detalle"
             android:hint="@string/titulo"
             android:textColorHint="@color/selecionado"
             app:boxCornerRadiusBottomEnd="15dp"
+
             app:boxCornerRadiusBottomStart="15dp"
-
             app:boxCornerRadiusTopEnd="15dp"
-            app:boxCornerRadiusTopStart="15dp"
 
+            app:boxCornerRadiusTopStart="15dp"
             app:errorEnabled="true"
             app:helperText="@string/requerido"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout2">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editlayout_title"
@@ -53,11 +64,9 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/combobox_type"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
             android:hint="@string/select_type"
             android:textColorHint="@color/selecionado"
             app:boxCornerRadiusBottomEnd="15dp"
@@ -65,8 +74,8 @@
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp"
             app:helperText="@string/requerido"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/input_titulo"
+            app:layout_constraintStart_toStartOf="@+id/input_titulo"
             app:layout_constraintTop_toBottomOf="@+id/input_titulo">
 
             <AutoCompleteTextView
@@ -82,9 +91,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
             android:hint="@string/description"
             android:textColorHint="@color/selecionado"
             app:boxCornerRadiusBottomEnd="15dp"
@@ -92,8 +99,8 @@
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp"
             app:helperText="@string/opcional"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/combobox_type"
+            app:layout_constraintStart_toStartOf="@+id/combobox_type"
             app:layout_constraintTop_toBottomOf="@+id/combobox_type">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -108,7 +115,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="@color/selecionado"
             android:src="@drawable/ic_baseline_add_circle_outline_24"
             app:layout_constraintBottom_toBottomOf="parent"

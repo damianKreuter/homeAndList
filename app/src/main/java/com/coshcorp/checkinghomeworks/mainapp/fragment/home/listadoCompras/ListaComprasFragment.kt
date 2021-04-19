@@ -1,5 +1,7 @@
 package com.coshcorp.checkinghomeworks.mainapp.fragment.home.listadoCompras
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +10,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.coshcorp.checkinghomeworks.R
+import com.coshcorp.checkinghomeworks.mainapp.entities.enumType.FragmentActivo
 import com.coshcorp.checkinghomeworks.mainapp.entities.model.Almacen
 import com.coshcorp.checkinghomeworks.mainapp.entities.model.ListaCompra
 import com.coshcorp.checkinghomeworks.mainapp.fragment.ChartsFragment
@@ -41,6 +44,15 @@ class ListaComprasFragment : Fragment() {
 
         initRecyclerView()
 
+        actualizarSharePreference()
+    }
+
+    private fun actualizarSharePreference(){
+        val sharedPreferences : SharedPreferences = activity?.getSharedPreferences("navStatusToCreate", Context.MODE_PRIVATE)!!
+        val sharePreferenceEditor : SharedPreferences.Editor = sharedPreferences.edit()
+
+        sharePreferenceEditor.putString("navStatus", getString(R.string.liststatus))
+        sharePreferenceEditor.apply()
     }
 
     private fun initRecyclerView(){

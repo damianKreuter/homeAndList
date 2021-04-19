@@ -6,6 +6,9 @@
     <string name="nav_charts">Gráficos</string>
     <string name="nav_config">Configuración</string>
 
+    <string name="open">Abrir</string>
+    <string name="close">Cerrar</string>
+
     <string name="tab_stock">Almacenamiento</string>
     <string name="tab_shoppingList">Lista de compras</string>
 

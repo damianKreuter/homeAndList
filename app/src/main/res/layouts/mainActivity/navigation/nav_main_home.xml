@@ -21,6 +21,11 @@
         tools:layout="@layout/fragment_main_page" >
         <action
             android:id="@+id/action_main_page_to_crearElementoFragment"
-            app:destination="@id/crearElementoFragment" />
+            app:destination="@id/crearElementoFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpToInclusive="false" />
     </fragment>
 </navigation>

@@ -1,5 +1,7 @@
 package com.coshcorp.checkinghomeworks.mainapp.fragment.home.almacenamiento
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -40,7 +42,16 @@ class AlmacenesFragment : Fragment() {
         stockArray = ArrayList()
 
         initRecyclerView()
+        actualizarSharePreference()
 
+    }
+
+    private fun actualizarSharePreference(){
+        val sharedPreferences : SharedPreferences = activity?.getSharedPreferences("navStatusToCreate", Context.MODE_PRIVATE)!!
+        val sharePreferenceEditor : SharedPreferences.Editor = sharedPreferences.edit()
+
+        sharePreferenceEditor.putString("navStatus", getString(R.string.stockstatus))
+        sharePreferenceEditor.apply()
     }
 
     private fun initRecyclerView(){

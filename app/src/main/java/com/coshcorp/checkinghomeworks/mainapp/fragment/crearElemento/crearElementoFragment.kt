@@ -41,6 +41,8 @@ class crearElementoFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_crear_elemento, container, false)
     }
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -49,6 +51,9 @@ class crearElementoFragment : Fragment() {
         combobox = combobox_type
         titleInput = editlayout_title
         titleLayout = input_titulo
+
+        toolbar.setTitle("Crear elemento")
+        toolbar.setSubtitle("Paso 1 de 3")
 
 
         guardarElementos()
@@ -80,6 +85,13 @@ class crearElementoFragment : Fragment() {
                 //     titleLayout.isErrorEnabled = true
                 Toast.makeText(context, toastMessage, Toast.LENGTH_LONG).show()
             } else {
+                //Salió OK, entonces procedemos a realizar el servicio de alta de 1 objeto de estos
+
+                /*
+                TODO
+                Craer un servicio del cual me permita dar de alta STOCK Y LISTA DE COMPRAS,
+                en principio vacias.
+                 */
                 Navigation.findNavController(view).navigate(R.id.action_crearElementoFragment_to_main_page)
             }
 
@@ -98,6 +110,7 @@ class crearElementoFragment : Fragment() {
         }
         val adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item, nombresAComboBox)
         autoCompleteTextView.setAdapter(adapter)
+        autoCompleteTextView.setText(nombresAComboBox.get(0),false)
         return nombresAComboBox
     }
 
